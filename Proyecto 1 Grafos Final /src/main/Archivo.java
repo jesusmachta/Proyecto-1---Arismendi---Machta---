@@ -17,7 +17,16 @@ import javax.swing.JOptionPane;
  *
  * @author andres
  */
+
+
 public class Archivo {
+    
+    
+/**
+ * Lee el txt y lo retorna como un String
+ * @param direccion
+ * @return 
+ */
     
     public String leer(String direccion) {
         String text = "";

@@ -155,6 +155,7 @@ public class AgregarUsuario extends javax.swing.JFrame {
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         Functions f = new Functions();
+        this.dispose();
         f.Volver();
     }//GEN-LAST:event_jButton5ActionPerformed
 

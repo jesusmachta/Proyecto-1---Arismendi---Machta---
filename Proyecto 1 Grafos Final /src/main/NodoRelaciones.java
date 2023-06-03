@@ -5,31 +5,31 @@
 package main;
 
 /**
- *
+ *Clase nod relaciones con sus getters y setters
  * @author andres
  */
-public class NodoUsuarios {
-    private Usuario elemento;
-    private NodoUsuarios next;
+public class NodoRelaciones {
+    private Relaciones elemento;
+    private NodoRelaciones next;
 
-    public NodoUsuarios(Usuario elemento) {
+    public NodoRelaciones(Relaciones elemento) {
         this.elemento = elemento;
         this.next = null;
     }
 
-    public Usuario getElemento() {
+    public Relaciones getElemento() {
         return elemento;
     }
 
-    public void setElemento(Usuario elemento) {
+    public void setElemento(Relaciones elemento) {
         this.elemento = elemento;
     }
 
-    public NodoUsuarios getNext() {
+    public NodoRelaciones getNext() {
         return next;
     }
 
-    public void setNext(NodoUsuarios next) {
+    public void setNext(NodoRelaciones next) {
         this.next = next;
     }
     

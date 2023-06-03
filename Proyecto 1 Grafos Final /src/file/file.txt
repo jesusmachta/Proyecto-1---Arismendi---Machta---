@@ -1,4 +1,4 @@
-Usuarios 
+Usuarios
 121, @Pepe_Gónzales
 254, @StephaniaCominos
 365, @AndreaStanislao
@@ -8,14 +8,16 @@ Usuarios
 123, @EnriqueManrique
 129, @casanova23
 870, @venepositivo
+758, @yosoylatorre
 578, @pitiypo
 909, @obiwan123
 893, @caribu_sol
 467, @trapos232
+788, @bandido121
 239, @justiciero11
 443, @fuerza_bruta
 907, @Presentesiempre
-Relaciones 
+Relaciones
 121, 254, 7
 121, 909, 8
 254,909,5
@@ -39,5 +41,3 @@ Relaciones
 870, 758, 1
 758, 365, 9
 578, 365, 4
-121, 123, 5
-121, 256, 4
