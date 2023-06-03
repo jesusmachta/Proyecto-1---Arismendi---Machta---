@@ -6,7 +6,7 @@ package main;
 
 /**
  *Clase nod relaciones con sus getters y setters
- * @author andres
+ * @author jesusmachta
  */
 public class NodoRelaciones {
     private Relaciones elemento;

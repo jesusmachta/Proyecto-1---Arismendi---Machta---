@@ -8,7 +8,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author andres
+ * @author jesusmachta
  */
 public class BorrarUsuario extends javax.swing.JFrame {
 

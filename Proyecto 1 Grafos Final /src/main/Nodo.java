@@ -6,7 +6,7 @@ package main;
 
 /**
  *Clase nodo con sus getters y setters
- * @author andres
+ * @author andrespaz
  */
 public class Nodo {
      private int element;

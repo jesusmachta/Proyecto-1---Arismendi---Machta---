@@ -7,7 +7,7 @@ package main;
 /**
  *Clase usuario con sus respetivos getters y setters, parametros
  * nombre del usuario, el ID y la lista de adyacencia que contiene cada usuario
- * @author andres
+ * @author andrespaz
  */
 public class Usuario {
     private String name;

@@ -8,7 +8,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author andres
+ * @author andrespaz
  */
 public class MostrarUsuarios extends javax.swing.JFrame {
 

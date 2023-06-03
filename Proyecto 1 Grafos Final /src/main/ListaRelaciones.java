@@ -6,7 +6,7 @@ package main;
 
 /**
  *Clase listaRelaciones con sus respectivos getters, setters y funciones primitivas
- * @author andres
+ * @author jesusmachta
  */
 public class ListaRelaciones {
     private NodoRelaciones head;

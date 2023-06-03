@@ -8,7 +8,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author andres
+ * @author jesusmachta
  */
 public class AgregarUsuario extends javax.swing.JFrame {
 

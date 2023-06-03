@@ -7,7 +7,7 @@ package main;
 /**
  *Clase Relaciones con sus respetivos getters y setters
  * parametos ID usuario1, ID usuario2 y años de amistad
- * @author andres
+ * @author jesusmachta
  */
 public class Relaciones {
     private int id;

@@ -8,7 +8,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author andres
+ * @author luisarismendi
  */
 public class MostrarPuentes extends javax.swing.JFrame {
 

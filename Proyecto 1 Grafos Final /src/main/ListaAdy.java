@@ -6,7 +6,7 @@ package main;
 
 /**
  *Clase lista de adyacencia con sus getters, setters y funciones primitivas 
- * @author andres
+ * @author jesusmachta
  */
 public class ListaAdy {
     private Nodo head;

@@ -6,7 +6,7 @@ package main;
 
 /**
  *Clase Lista Usuarios con sus getters, setters y funciones primitivas
- * @author andres
+ * @author andrespaz
  */
 public class ListaUsuarios {
     private NodoUsuarios head;

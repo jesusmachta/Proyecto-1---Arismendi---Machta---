@@ -8,7 +8,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author andres
+ * @author luisarismendi
  */
 public class MostrarDFS extends javax.swing.JFrame {
 

@@ -9,7 +9,7 @@ import javax.swing.JOptionPane;
 
 /**
  *Clase main en la cual comienza la ejecucion del programa 
- * @author andres
+ * @author andrespaz
  */
 public class main {
 

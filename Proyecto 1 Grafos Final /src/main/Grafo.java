@@ -6,7 +6,7 @@ package main;
 
 /**
  *Clase grafo con sus getters y setters
- * @author andres
+ * @author luisarismendi
  */
 public class Grafo {
    private ListaUsuarios listaU;

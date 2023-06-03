@@ -26,7 +26,7 @@ import main.main;
 import org.graphstream.ui.view.Viewer;
 /**
  *
- * @author andres
+ * @author luisarismendi
  */
 
 /**

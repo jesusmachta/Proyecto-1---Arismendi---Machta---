@@ -8,7 +8,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author andres
+ * @author luisarismendi
  */
 public class MostrarBFS extends javax.swing.JFrame {
 

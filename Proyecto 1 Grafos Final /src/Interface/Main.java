@@ -6,7 +6,7 @@ package Interface;
 
 /**
  *
- * @author andres
+ * @author andrespaz
  */
 public class Main extends javax.swing.JFrame {
 
