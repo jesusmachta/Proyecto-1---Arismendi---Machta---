@@ -20,7 +20,7 @@ import javax.swing.JOptionPane;
 
 
 public class Archivo {
-    
+  
     
 /**
  * Lee el txt y lo retorna como un String

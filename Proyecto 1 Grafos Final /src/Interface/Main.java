@@ -4,6 +4,8 @@
  */
 package Interface;
 
+import java.awt.Color;
+
 /**
  *
  * @author andrespaz
@@ -16,6 +18,7 @@ public class Main extends javax.swing.JFrame {
     public Main() {
         initComponents();
         this.pack();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -27,162 +30,181 @@ public class Main extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
-        jPanel3 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
+        BG = new javax.swing.JPanel();
+        Mostrar_Usuarios = new javax.swing.JButton();
+        Mostrar_Grafos = new javax.swing.JButton();
+        Agregar_Usuarios = new javax.swing.JButton();
+        Crear_Amistades = new javax.swing.JButton();
+        Borrar_Usuarios = new javax.swing.JButton();
+        Cargar_Datos = new javax.swing.JButton();
+        BFS = new javax.swing.JButton();
+        Puentes = new javax.swing.JButton();
+        DFS = new javax.swing.JButton();
+        ExitBt = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(133, 60, -1, -1));
+        BG.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(133, 91, -1, -1));
-
-        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jButton1.setText("Mostrar Usuarios");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        Mostrar_Usuarios.setText("Mostrar Usuarios");
+        Mostrar_Usuarios.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Mostrar_Usuarios.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                Mostrar_UsuariosActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 150, -1));
+        BG.add(Mostrar_Usuarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 180, 60));
 
-        jButton3.setText("Mostrar Grafo");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        Mostrar_Grafos.setText("Mostrar Grafo");
+        Mostrar_Grafos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Mostrar_Grafos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                Mostrar_GrafosActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 150, -1));
+        BG.add(Mostrar_Grafos, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 180, 60));
 
-        jButton4.setText("Agregar Usuarios");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        Agregar_Usuarios.setText("Agregar Usuarios");
+        Agregar_Usuarios.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Agregar_Usuarios.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                Agregar_UsuariosActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 40, 140, -1));
+        BG.add(Agregar_Usuarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 90, 180, 60));
 
-        jButton5.setText("Crear Amistades");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        Crear_Amistades.setText("Crear Amistades");
+        Crear_Amistades.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Crear_Amistades.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                Crear_AmistadesActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 80, 140, -1));
+        BG.add(Crear_Amistades, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 210, 180, 60));
 
-        jButton6.setText("Borrar Usuarios");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        Borrar_Usuarios.setText("Borrar Usuarios");
+        Borrar_Usuarios.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Borrar_Usuarios.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                Borrar_UsuariosActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 120, 140, -1));
+        BG.add(Borrar_Usuarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 330, 180, 60));
 
-        jButton7.setText("Cargar Datos");
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        Cargar_Datos.setText("Cargar Datos");
+        Cargar_Datos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Cargar_Datos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                Cargar_DatosActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, 150, -1));
+        BG.add(Cargar_Datos, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 180, 60));
 
-        jButton2.setText("BFS");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        BFS.setText("BFS");
+        BFS.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        BFS.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                BFSActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 40, 120, -1));
+        BG.add(BFS, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 90, 180, 60));
 
-        jButton8.setText("Puentes");
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
+        Puentes.setText("Puentes");
+        Puentes.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Puentes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
+                PuentesActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 120, 120, -1));
+        BG.add(Puentes, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 330, 180, 60));
 
-        jButton9.setText("DFS");
-        jButton9.addActionListener(new java.awt.event.ActionListener() {
+        DFS.setText("DFS");
+        DFS.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        DFS.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton9ActionPerformed(evt);
+                DFSActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 80, 120, -1));
+        BG.add(DFS, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 210, 180, 60));
 
-        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 550, 180));
+        ExitBt.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
+        ExitBt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ExitBt.setText("X");
+        ExitBt.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        ExitBt.setPreferredSize(new java.awt.Dimension(40, 40));
+        ExitBt.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ExitBtMouseClicked(evt);
+            }
+        });
+        BG.add(ExitBt, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 0, 50, 40));
+
+        getContentPane().add(BG, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 640, 440));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+    private void Cargar_DatosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cargar_DatosActionPerformed
         Functions f = new Functions();
         f.CargarDatos();
         
-    }//GEN-LAST:event_jButton7ActionPerformed
+    }//GEN-LAST:event_Cargar_DatosActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void Mostrar_UsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Mostrar_UsuariosActionPerformed
         Functions f = new Functions();
         f.mostrar();
         
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_Mostrar_UsuariosActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void Agregar_UsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Agregar_UsuariosActionPerformed
         // TODO add your handling code here:
         Functions f = new Functions();
         f.agregar();
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_Agregar_UsuariosActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    private void Borrar_UsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Borrar_UsuariosActionPerformed
         // TODO add your handling code here:
         Functions f = new Functions();
         f.borrarU();
-    }//GEN-LAST:event_jButton6ActionPerformed
+    }//GEN-LAST:event_Borrar_UsuariosActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void Crear_AmistadesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Crear_AmistadesActionPerformed
         // TODO add your handling code here:
         Functions f = new Functions();
         f.AgregarR();
                
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }//GEN-LAST:event_Crear_AmistadesActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void Mostrar_GrafosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Mostrar_GrafosActionPerformed
         // TODO add your handling code here:
         Functions f = new Functions();
         f.MostrarGrafo();
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_Mostrar_GrafosActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void BFSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BFSActionPerformed
         // TODO add your handling code here:
         Functions f = new Functions();
         f.MostrarBFS();
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_BFSActionPerformed
 
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+    private void PuentesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PuentesActionPerformed
         // TODO add your handling code here:
         Functions f = new Functions();
         f.MostrarPuentes();
         
-    }//GEN-LAST:event_jButton8ActionPerformed
+    }//GEN-LAST:event_PuentesActionPerformed
 
-    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+    private void DFSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DFSActionPerformed
         // TODO add your handling code here:
         Functions f = new Functions();
         f.MostrarDFS();
-    }//GEN-LAST:event_jButton9ActionPerformed
+    }//GEN-LAST:event_DFSActionPerformed
+
+    private void ExitBtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExitBtMouseClicked
+        System.exit(0);
+    }//GEN-LAST:event_ExitBtMouseClicked
 
     /**
      * @param args the command line arguments
@@ -220,17 +242,16 @@ public class Main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
+    private javax.swing.JButton Agregar_Usuarios;
+    private javax.swing.JButton BFS;
+    private javax.swing.JPanel BG;
+    private javax.swing.JButton Borrar_Usuarios;
+    private javax.swing.JButton Cargar_Datos;
+    private javax.swing.JButton Crear_Amistades;
+    private javax.swing.JButton DFS;
+    private javax.swing.JLabel ExitBt;
+    private javax.swing.JButton Mostrar_Grafos;
+    private javax.swing.JButton Mostrar_Usuarios;
+    private javax.swing.JButton Puentes;
     // End of variables declaration//GEN-END:variables
 }

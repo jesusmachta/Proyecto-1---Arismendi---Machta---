@@ -24,15 +24,12 @@ import main.Relaciones;
 
 import main.main;
 import org.graphstream.ui.view.Viewer;
-/**
- *
- * @author luisarismendi
- */
 
 /**
  * Aca se declaran las nuevas variables con las cuales llamaremos a las interfaces graficas
- * @author andres
+ * @author andrespaz, jesusmachta, luisarismendi
  */
+
 public class Functions {
     Main main = new Main();
     CargarTxt txt = new CargarTxt();
@@ -43,11 +40,7 @@ public class Functions {
     MostrarDFS dfs = new MostrarDFS();
     MostrarBFS bfs = new MostrarBFS();
     MostrarPuentes puentes = new MostrarPuentes();
-/**
- * Aca se lee el archivo txt y se retorna como texto de tipo string
- * @param direccion
- * @return 
- */
+
     public String leer(String direccion){
         String text = "";
 
@@ -76,10 +69,7 @@ public class Functions {
         }
         return text;
     }
-/**
- * aca recorremos el txt y separamos a los usuarios de las relaciones y retorna un texto de tipo String con los usuarios
- * @return 
- */
+    
     public String SepararUsuarios(){ 
         Functions f = new Functions();
         String direccion = "src//file//file.txt";
@@ -98,10 +88,7 @@ public class Functions {
         //System.out.println(usuarios);
         return usuarios;
         }
-/**
- * Aca recorremos el txt y separamos a las relaciones de los usuarios y retorna un texto de tipo string con las relaciones
- * @return 
- */    
+    
     public String SepararRelaciones(){
         Functions f = new Functions();
         String direccion = "src//file//file.txt";
@@ -124,13 +111,7 @@ public class Functions {
         
         return relaciones;
     }
-/**
- * Actualizamos el txt con los valores actualizados de los usuarios y las relaciones
- * y se pasa de parametros los usuarios y las relaciones
- * @param u
- * @param r
- * @return 
- */   
+    
     public String ActualizarTxt(String u, String r){
         File Old_File=new File("src//file//file.txt");
         Old_File.delete();
@@ -147,11 +128,7 @@ public class Functions {
         return a;
     }
 
-/**
- * Agregamos usuarios al archivo txt y se pasa de parametros el usuario y el ID 
- * @param usuario
- * @param id 
- */    
+    
     public void AgregarUsuario(String usuario,int id){
         Functions f = new Functions();
         String p = String.valueOf(id);
@@ -167,10 +144,7 @@ public class Functions {
         }
         
     }
-/**
- * Borramos usuarios del archivo txt y se pasa de parametro el usuario que queremos eliminar
- * @param usuario 
- */   
+   
     public void BorrarUsuario(String usuario){
         String user = "@" + usuario;
        
@@ -213,10 +187,7 @@ public class Functions {
         
         f.ActualizarTxt(a,r2);
     }
-/**
- * Aca mostramos a los usuarios registrados en el txt y retorna un texto de tipo String con ellos
- * @return 
- */    
+    
     public String MostrarUsuarios(){
         Functions f = new Functions();
         String u = f.SepararUsuarios();
@@ -229,10 +200,7 @@ public class Functions {
         }
         return a;
     }
-/**
- * Mostramos los IDS de los usuarios registrados en el txt y retorna un texto de tipo String con ellos
- * @return 
- */    
+    
     public String MostrarIDS(){
         Functions f = new Functions();
         String u = f.SepararUsuarios();
@@ -245,14 +213,18 @@ public class Functions {
         }
         return a;
     }
-/**
- * Aca creamos vinculos entre usuarios y se pasa de parametro el ID del primer usuario , el ID del segundo usuario
- * Y sus años de amistad
- * @param a
- * @param b
- * @param c
- * @return 
- */    
+    
+    public String MostrarUsuariosID(){
+        Functions f = new Functions();
+        String u = f.SepararUsuarios();
+        String a = "";
+        String [] arrayU = u.split("\n");
+        for (int i = 1; i < arrayU.length; i++) {
+            String [] h = arrayU[i].split(",");
+            a += "ID: " + h[0] + "  / " + h[1] +"\n";
+        }
+        return a;
+    }
     
     public String crearRelaciones(String a,String b,String c){
         Functions f = new Functions();
@@ -277,18 +249,11 @@ public class Functions {
         
         return r;
     }
-/**
- * Mostramos la pestaña Cargar datos
- */
     
     public void CargarDatos(){
         main.setVisible(false);
         txt.setVisible(true);
     }
-
-/**
- * esta funcion nos permite mostrar graficamente el grafo
- */
     
     public void MostrarGrafo(){
         Graph g = new SingleGraph("Grafo");
@@ -319,18 +284,12 @@ public class Functions {
         Viewer viewer = g.display();
         viewer.setCloseFramePolicy(Viewer.CloseFramePolicy.HIDE_ONLY);
     }
-
-/**
- * Esta funcion nos muestra la interfaz grafica main
- */
     
     public void Main(){
         main.setVisible(true);
         
     }
-/**
- * Esta funcion nos permite devolvernos a la interfaz grafica main
- */
+    
     public void Volver(){
         txt.setVisible(false);
         show.setVisible(false);
@@ -339,76 +298,48 @@ public class Functions {
         agregarA.setVisible(false);
         main.setVisible(false);
     }
-/**
- * Esta funcion nos permite abrir la interfaz Mostrar Usuarios
- */   
+    
     public void mostrar(){
         show.setVisible(true);
         main.setVisible(false);
     }
-/**
- * Esta nos permite abrir la interfaz Agregar Usuarios
- */
     
     public void agregar(){
         main.setVisible(false);
         agregar.setVisible(true);
-       
+        
     }
-    
-/**
- * Esta nos abre la interfaz borrar usuarios
- */
     public void borrarU(){
         main.setVisible(false);
         borrar.setVisible(true);
         
     }
-/**
- * Esta nos abre la interfaz grafica Borrar Usuarios
- */
     public void AgregarR(){
         main.setVisible(false);
         agregarA.setVisible(true);
         
     }
-/**
- * Esta nos permite abrir la interfaz Mostrar BFS
- */
     
     public void MostrarBFS(){
         main.setVisible(false);
         bfs.setVisible(true);
     }
-/**
- * Esta nos permite abrir la interfaz mostrar DFS
- */    
+    
     public void MostrarDFS(){
         main.setVisible(false);
         dfs.setVisible(true);
     }
-/**
- * Esta nos permite abrir la interfaz Mostrar puentes
- */    
+    
     public void MostrarPuentes(){
         main.setVisible(false);
         puentes.setVisible(true);
     }
- /**
-  * En esta funcion Obtenemos el ID de cada usuario y retornamos un Array de ellos
-  * @param relaciones
-  * @param i
-  * @return 
-  */   
+    
     public String ObtenerIDUsuario(String relaciones, int i){
         String[] ids = relaciones.split(" ");
         return ids[i];
     }
-/**
- * Obbtenemos la cantidad de IDS y retornamos un valor de tipo int con la cantidad
- * @param relaciones
- * @return 
- */    
+    
     public int contarIDS(String relaciones){
         int n = 1;
         for (int i = 0; i < relaciones.length(); i++) {
@@ -418,13 +349,6 @@ public class Functions {
         }
         return n;
     }
-/**
- * Aca realizamos el recorrido DFS y retornamos un texto de tipo con el recorrido que hace
- * @param i
- * @param listaAdy
- * @param visitados
- * @return 
- */
     
     public String DFS(int i, String[] listaAdy,  boolean[] visitados){
         String recorrido = ObtenerIDUsuario(listaAdy[i], 0)+ " ";
@@ -440,14 +364,6 @@ public class Functions {
         
         return recorrido;
     }
-
-/**
- * Aca obtenemos el indice en donde se encuentra el usuario y pasamos de parametros un array de usuarios y el usuario que 
- * se quiere conseguir el id y retorna el indice
- * @param usuarios
- * @param nombre
- * @return 
- */
     
     public int ObtenerIndiceUsuario(String[] usuarios, String nombre){
         int n = usuarios.length;
@@ -458,10 +374,7 @@ public class Functions {
         }
         return -1;
     }
-/**
- * Aca creamos la lista de adyacencia y la retornamos ya con sus valore asignados
- * @return 
- */    
+    
     public String[] crearListaAdyacencia(){
         String[] listaAdy = MostrarIDS().split("\n");
         String[] relaciones = SepararRelaciones().split("\n");
@@ -477,12 +390,7 @@ public class Functions {
         
         return listaAdy;
     }
-
-/**
- * Aca obtenemos las islas por el recorrido dfs dentro de la lista de adyacencia y retornamos un string con las islas
- * @param listaAdy
- * @return 
- */    
+    
     public String IslasDFS(String[] listaAdy){
         String islas = "";
         
@@ -500,11 +408,7 @@ public class Functions {
            
         return islas;
     }
-/**
- * Aca recorremos la lista de adyacencia y obtenemos la cantidad de islas que contiene el grafo retornamos un int con lo que obtuvimos
- * @param listaAdy
- * @return 
- */
+    
     public int numeroIslas(String[] listaAdy){
         String islas = IslasDFS(listaAdy);
         
@@ -521,11 +425,6 @@ public class Functions {
        
         return numIslas;
     }
-    
-/**
- * Aca obtenemos las relaciones que son puentes en el grafo y retornamos un String con dicha relacion
- * @return 
- */
     
     public String Puentes(){
        String puentesEncontrados = "";
@@ -559,12 +458,6 @@ public class Functions {
         return puentesEncontrados;
     }
     
-/**
- * 
- * @param amigos
- * @return 
- */
-    
     public String eliminarPrimerID(String amigos){
         int start = amigos.indexOf(" ");
         if(start == -1){
@@ -573,13 +466,7 @@ public class Functions {
             return amigos.substring(start + 1);
         }
     }
-/**
- * Realizamos el recorrido bfs de la lista de abyacencia y retorna un String con el recorrido realizado
- * @param i
- * @param listaAdy
- * @param visitados
- * @return 
- */    
+    
     public String BFS(int i, String[] listaAdy,  boolean[] visitados){
         String recorrido = "";
         visitados[i] = true;
@@ -608,10 +495,7 @@ public class Functions {
         
         return recorrido;
     }
-/**
- * Aca obtenemos las islas por el recorrido bfs y retornamos un String con el recorrido que hizo
- * @return 
- */    
+    
     public String IslasBFS(){
         String islas = "";
         String[] listaAdy = crearListaAdyacencia();
@@ -627,11 +511,7 @@ public class Functions {
 
         return islas;
     }
- 
-/**
- * Aca creamos una lista que contiene a todos los usuarios con sus ids y retornamos dicha lista
- * @return 
- */    
+     
     public ListaUsuarios Usuarios(){
         Functions f = new Functions();
         String r = SepararUsuarios();
@@ -648,10 +528,7 @@ public class Functions {
         return list;
         
     }
-/**
- * Creamos una lista con la cantidad de relaciones existentes en el txt y la retornamos
- * @return 
- */    
+    
     public ListaRelaciones Relaciones(){
         Functions f = new Functions();
         String r = f.SepararRelaciones();
